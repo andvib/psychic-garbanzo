@@ -31,6 +31,9 @@ def main():
 	ax[1].imshow(grey_image2, cmap = plt.cm.Greys_r)
 	ax[1].set_axis_off()
 	plt.show()
+	
+	misc.imsave('task21a-average.png', grey_image1)
+	misc.imsave('task21a-weighted.png', grey_image2)
 
 if __name__ == "__main__":
 	main()

@@ -32,16 +32,21 @@ def main():
 
 	grey_image = grey(image)
 	grey_trans = transform(grey_image)
-	grey_gamma_trans = gamma_transform(grey_image, 1)
+	grey_gamma_trans1 = gamma_transform(grey_image, 2)
+	grey_gamma_trans2 = gamma_transform(grey_image, 0.5)
 	
 	_, ax = plt.subplots(1,3, figsize=(20,18))
 	ax[0].imshow(grey_image, cmap = plt.cm.Greys_r)
 	ax[0].set_axis_off()
 	ax[1].imshow(grey_trans, cmap = plt.cm.Greys_r)
 	ax[1].set_axis_off()
-	ax[2].imshow(grey_gamma_trans, cmap = plt.cm.Greys_r)
+	ax[2].imshow(grey_gamma_trans1, cmap = plt.cm.Greys_r)
 	ax[2].set_axis_off()
 	plt.show()
+	
+	misc.imsave('task22a.png', grey_trans)
+	misc.imsave('task22b-2.png', grey_gamma_trans1)
+	misc.imsave('task22b-05.png', grey_gamma_trans2)
 
 	
 	
