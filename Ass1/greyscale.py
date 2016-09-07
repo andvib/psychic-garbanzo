@@ -32,7 +32,5 @@ def main():
 	ax[1].set_axis_off()
 	plt.show()
 
-	grey_image2 = grey_two()
-
 if __name__ == "__main__":
 	main()
